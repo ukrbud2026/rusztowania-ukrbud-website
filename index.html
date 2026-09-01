@@ -3,178 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UKR-BUD — Usługi budowlane</title>
+<title>UKR-BUD | Rusztowania Warszawa i Łódź</title>
+<meta name="description" content="UKR-BUD — montaż, demontaż i wynajem rusztowań. Warszawa, Łódź i okolice. Dostawa oraz odbiór rusztowań.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#fff;line-height:1.5}
-:root{--black:#080808;--dark:#111;--orange:#ff5a00;--white:#fff;--gray:#aaa;--border:rgba(255,255,255,.12)}
+body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#fff;line-height:1.6}
 a{color:inherit;text-decoration:none}
-.container{width:min(1200px,92%);margin:auto}
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(8,8,8,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav{height:80px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:28px;font-weight:900}.logo span{color:var(--orange)}
-.menu{display:flex;gap:30px}.menu a{font-size:14px;color:#ddd;transition:.2s}.menu a:hover{color:var(--orange)}
-.nav-button{background:var(--orange);padding:12px 22px;border-radius:4px;font-weight:bold}
-.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.65),rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=90") center/cover}
-.hero-content{max-width:850px;padding-top:80px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--orange);text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:bold;margin-bottom:20px}
-.eyebrow:before{content:"";width:35px;height:2px;background:var(--orange)}
-h1{font-size:clamp(50px,8vw,90px);line-height:.95;letter-spacing:-4px;margin-bottom:25px}
-h1 span{color:var(--orange)}
-.hero p{max-width:680px;font-size:19px;color:#ccc;margin-bottom:35px}
-.buttons{display:flex;gap:15px;flex-wrap:wrap}
-.btn{padding:16px 28px;border-radius:5px;font-weight:bold;display:inline-block;transition:.25s}
-.btn-primary{background:var(--orange)}.btn-primary:hover{transform:translateY(-2px);background:#ff701f}
-.btn-outline{border:1px solid rgba(255,255,255,.3)}.btn-outline:hover{border-color:var(--orange);color:var(--orange)}
-section{padding:110px 0}.services,.projects{background:#0d0d0d}
-.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:55px}
-.section-head h2{font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-2px}
-.section-head p{max-width:480px;color:var(--gray)}
-.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.service{min-height:320px;padding:35px;background:#121212;border:1px solid var(--border);transition:.3s}
-.service:hover{border-color:var(--orange);transform:translateY(-5px)}
-.service-number{color:var(--orange);font-size:13px;font-weight:bold;margin-bottom:75px}
-.service h3{font-size:28px;margin-bottom:12px}.service p{color:var(--gray)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.about-image{min-height:550px;background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85") center/cover}
-.about-text h2{font-size:clamp(40px,5vw,65px);line-height:1;margin-bottom:25px}.about-text h2 span{color:var(--orange)}
-.about-text p{color:var(--gray);font-size:17px;margin-bottom:20px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
-.stat{border-top:2px solid var(--orange);padding-top:15px}.stat strong{display:block;font-size:35px}.stat span{color:var(--gray);font-size:13px}
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.project{height:430px;position:relative;background-size:cover;background-position:center}
-.project:nth-child(1){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1000&q=80")}
-.project:nth-child(2){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80")}
-.project:nth-child(3){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1000&q=80")}
-.project:nth-child(4){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1000&q=80")}
-.project:nth-child(5){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80")}
-.project:nth-child(6){background-image:linear-gradient(transparent,rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1000&q=80")}
-.project-info{position:absolute;left:25px;bottom:25px}.project-info small{color:var(--orange);font-weight:bold}.project-info h3{font-size:25px}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border)}
-.step{padding:30px;min-height:240px;border-right:1px solid var(--border)}.step:last-child{border-right:0}
-.step-number{font-size:45px;font-weight:900;color:var(--orange);margin-bottom:30px}.step h3{margin-bottom:10px}.step p{color:var(--gray);font-size:14px}
-.contact{background:var(--orange);color:#000}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.contact h2{font-size:clamp(45px,6vw,75px);line-height:.95;margin-bottom:25px}.contact p{font-size:18px}
-.contact-info{display:grid;gap:15px}.contact-item{padding:20px 0;border-bottom:1px solid rgba(0,0,0,.25)}
-.contact-item small{display:block;opacity:.6;margin-bottom:4px}.contact-item a{font-size:22px;font-weight:bold}
-footer{background:#050505;padding:35px 0}.footer-content{display:flex;justify-content:space-between;color:#777;font-size:13px}
-@media(max-width:850px){
-.menu{display:none}.service-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-.project-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}
-.step{border-right:0;border-bottom:1px solid var(--border)}.section-head{display:block}.section-head p{margin-top:20px}
-}
-@media(max-width:550px){
-section{padding:75px 0}h1{letter-spacing:-2px}.hero p{font-size:16px}
-.project-grid,.process-grid,.stats{grid-template-columns:1fr}.project{height:380px}.service{min-height:280px}
-.footer-content{flex-direction:column;gap:10px}
-}
+.container{width:90%;max-width:1200px;margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(8,8,8,.95);border-bottom:1px solid #222}
+.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{font-size:30px;font-weight:900;letter-spacing:2px}.logo span{color:#ff6500}
+nav{display:flex;gap:28px}nav a{font-size:14px;font-weight:700;text-transform:uppercase}nav a:hover{color:#ff6500}
+.header-phone{color:#ff6500;font-weight:800;white-space:nowrap}
+.hero{min-height:100vh;padding-top:78px;display:flex;align-items:center;background:radial-gradient(circle at 80% 40%,#3b1805 0%,#080808 50%)}
+.hero-content{max-width:800px;padding:80px 0}.hero-label{color:#ff6500;font-size:15px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(44px,7vw,82px);line-height:.98;text-transform:uppercase;font-weight:900;margin-bottom:28px}.hero h1 span{color:#ff6500}
+.hero-text{max-width:650px;color:#cfcfcf;font-size:19px;margin-bottom:38px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;font-size:14px;font-weight:900;text-transform:uppercase;border:2px solid #ff6500;transition:.25s}
+.btn-primary{background:#ff6500;color:#000}.btn-primary:hover{background:#fff;border-color:#fff}
+.btn-outline:hover{background:#ff6500;color:#000}
+section{padding:100px 0}.section-title{margin-bottom:55px}.section-title small{color:#ff6500;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+.section-title h2{margin-top:10px;font-size:clamp(34px,5vw,55px);line-height:1.05;text-transform:uppercase;font-weight:900}.section-title h2 span{color:#ff6500}
+#services,#location{background:#101010}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{min-height:280px;padding:35px;background:#171717;border:1px solid #292929;transition:.25s}.service-card:hover{transform:translateY(-5px);border-color:#ff6500}
+.service-number{color:#ff6500;font-size:15px;font-weight:900;margin-bottom:35px}.service-card h3{font-size:25px;text-transform:uppercase;margin-bottom:15px}.service-card p{color:#aaa}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}.about-text p{color:#c2c2c2;font-size:18px;margin-bottom:20px}
+.advantages{display:grid;gap:15px}.advantage{padding:22px;background:#111;border-left:4px solid #ff6500}.advantage strong{display:block;font-size:18px;margin-bottom:5px}.advantage span{color:#999;font-size:14px}
+.location-box{padding:45px;border:1px solid #292929;background:#171717}.location-box h3{font-size:28px;text-transform:uppercase;margin-bottom:20px}
+.location-list{display:flex;flex-wrap:wrap;gap:12px}.location-list span{padding:12px 18px;background:#080808;border:1px solid #333;font-weight:800}.location-list span::before{content:"●";color:#ff6500;margin-right:8px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-card{background:#151515;border:1px solid #292929;padding:35px}
+.contact-card h3{color:#ff6500;text-transform:uppercase;font-size:16px;letter-spacing:2px;margin-bottom:12px}.contact-card p,.contact-card a{font-size:19px;font-weight:700;word-break:break-word}.contact-card a:hover{color:#ff6500}.address{line-height:1.8}
+.cta{padding:70px 0;background:#ff6500;color:#000}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:clamp(30px,5vw,52px);line-height:1;text-transform:uppercase;font-weight:900}.cta p{margin-top:10px;font-weight:700}.cta .btn{border-color:#000;color:#000}.cta .btn:hover{background:#000;color:#fff}
+footer{padding:45px 0 30px;background:#050505;border-top:1px solid #222}.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;padding-bottom:35px}
+.footer-logo{font-size:30px;font-weight:900;letter-spacing:2px}.footer-logo span{color:#ff6500}.footer-column h4{color:#ff6500;text-transform:uppercase;margin-bottom:15px;font-size:14px;letter-spacing:1px}.footer-column p,.footer-column a{color:#999;font-size:14px}.footer-column a:hover{color:#ff6500}
+.footer-bottom{padding-top:25px;border-top:1px solid #222;color:#666;font-size:13px;text-align:center}
+@media(max-width:850px){nav{display:none}.header-phone{font-size:13px}.services-grid,.contact-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:40px}.cta-inner{flex-direction:column;align-items:flex-start}.footer-top{grid-template-columns:1fr;gap:25px}}
+@media(max-width:500px){.container{width:92%}.header-inner{min-height:68px}.logo{font-size:25px}.header-phone{font-size:11px}.hero{padding-top:68px}.hero-content{padding:60px 0}.hero h1{font-size:43px}.hero-text{font-size:16px}section{padding:75px 0}.service-card,.contact-card,.location-box{padding:25px}}
+
+.social-links{display:flex;gap:12px;margin-top:20px}
+.social-link{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#111;border:1px solid #333;transition:.25s}.social-link svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.social-link:nth-child(2) svg,.social-link:nth-child(3) svg{fill:#fff;stroke:none}.social-link:hover{background:#ff6500;border-color:#ff6500;color:#000;transform:translateY(-3px)}.social-link:hover svg{stroke:#000}.social-link:nth-child(2):hover svg,.social-link:nth-child(3):hover svg{fill:#000}
+.social-link:hover{background:#ff6500;border-color:#ff6500;color:#000;transform:translateY(-3px)}
+
+
+#realizations{background:#080808}
+.realizations-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.realization-photo{display:block;position:relative;overflow:hidden;background:#171717;border:1px solid #292929;aspect-ratio:4/3}
+.realization-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s ease}
+.realization-photo:hover{border-color:#ff6500}
+.realization-photo:hover img{transform:scale(1.04)}
+@media(max-width:600px){.realizations-grid{grid-template-columns:1fr}}
+@media(max-width:850px){.realizations-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
-<header>
-<div class="container nav">
-<a href="#" class="logo">UKR<span>-</span>BUD</a>
-<nav class="menu">
-<a href="#services">Usługi</a>
-<a href="#about">O nas</a>
-<a href="#projects">Realizacje</a>
-<a href="#process">Jak działamy</a>
-</nav>
-<a href="#contact" class="nav-button">Kontakt</a>
-</div>
-</header>
+<header><div class="container header-inner">
+<a href="#home" class="logo">UKR<span>-</span>BUD</a>
+<nav><a href="#services">Usługi</a><a href="#about">O nas</a><a href="#realizations">Nasze realizacje</a><a href="#location">Obszar</a><a href="#contact">Kontakt</a></nav>
+<a href="tel:+48538434728" class="header-phone">+48 538 434 728</a>
+</div></header>
 
 <main>
-<section class="hero">
-<div class="container"><div class="hero-content">
-<div class="eyebrow">UKR-BUD</div>
-<h1>Budujemy<br><span>przyszłość.</span></h1>
-<p>Niezawodne ekipy budowlane i kompleksowa realizacja inwestycji na terenie całej Polski.</p>
-<div class="buttons">
-<a href="#contact" class="btn btn-primary">Porozmawiajmy →</a>
-<a href="#projects" class="btn btn-outline">Zobacz realizacje</a>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<div class="hero-label">Rusztowania • Warszawa • Łódź</div>
+<h1>Montaż.<br>Demontaż.<br><span>Wynajem.</span></h1>
+<p class="hero-text">Profesjonalne rusztowania dla budownictwa. Montaż, demontaż oraz wynajem rusztowań z dostawą i odbiorem.</p>
+<div class="hero-buttons"><a href="#contact" class="btn btn-primary">Zapytaj o wycenę</a><a href="tel:+48538434728" class="btn btn-outline">Zadzwoń</a></div>
+</div></div></section>
+
+<section id="services"><div class="container">
+<div class="section-title"><small>Co oferujemy</small><h2>Nasze <span>usługi</span></h2></div>
+<div class="services-grid">
+<div class="service-card"><div class="service-number">01</div><h3>Montaż rusztowań</h3><p>Profesjonalny montaż rusztowań dopasowanych do rodzaju i zakresu prowadzonych prac.</p></div>
+<div class="service-card"><div class="service-number">02</div><h3>Demontaż rusztowań</h3><p>Sprawny i bezpieczny demontaż rusztowań po zakończeniu prac budowlanych.</p></div>
+<div class="service-card"><div class="service-number">03</div><h3>Wynajem rusztowań</h3><p>Wynajem rusztowań na okres dopasowany do potrzeb inwestycji. Zapewniamy dostawę oraz odbiór.</p></div>
+</div></div></section>
+
+<section id="about"><div class="container">
+<div class="section-title"><small>UKR-BUD</small><h2>Solidne rozwiązania dla <span>budownictwa</span></h2></div>
+<div class="about-grid"><div class="about-text">
+<p>Zajmujemy się montażem, demontażem oraz wynajmem rusztowań dla klientów indywidualnych i firm.</p>
+<p>Obsługujemy inwestycje w Warszawie, Łodzi oraz okolicznych miejscowościach.</p>
+<p>Przy wynajmie zapewniamy również transport, dostawę oraz odbiór rusztowań.</p>
 </div>
-</div></div>
+<div class="advantages">
+<div class="advantage"><strong>Profesjonalny montaż</strong><span>Doświadczenie i odpowiednie podejście do każdego obiektu.</span></div>
+<div class="advantage"><strong>Dostawa i odbiór</strong><span>Transport rusztowań bezpośrednio na miejsce inwestycji.</span></div>
+<div class="advantage"><strong>Warszawa i Łódź</strong><span>Obsługujemy również okolice obu miast.</span></div>
+</div></div></div></section>
+
+
+<section id="realizations">
+  <div class="container">
+    <div class="section-title">
+      <small>Nasze realizacje</small>
+      <h2>Wybrane <span>realizacje</span></h2>
+    </div>
+    <div class="realizations-grid">
+      <a class="realization-photo" href="images/realizacja-1.jpeg" target="_blank" rel="noopener">
+        <img src="images/realizacja-1.jpeg" alt="Realizacja rusztowania 1">
+      </a>
+      <a class="realization-photo" href="images/realizacja-2.jpeg" target="_blank" rel="noopener">
+        <img src="images/realizacja-2.jpeg" alt="Realizacja rusztowania 2">
+      </a>
+      <a class="realization-photo" href="images/realizacja-3.jpeg" target="_blank" rel="noopener">
+        <img src="images/realizacja-3.jpeg" alt="Realizacja rusztowania 3">
+      </a>
+      <a class="realization-photo" href="images/realizacja-4.jpeg" target="_blank" rel="noopener">
+        <img src="images/realizacja-4.jpeg" alt="Realizacja rusztowania 4">
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="services" id="services">
-<div class="container">
-<div class="section-head"><div>
-<div class="eyebrow">Co robimy</div>
-<h2>Kompleksowe<br>usługi budowlane.</h2>
-</div><p>Od wykwalifikowanych ekip po kompleksową realizację inwestycji. Bierzemy odpowiedzialność za efekt końcowy.</p></div>
-<div class="service-grid">
-<div class="service"><div class="service-number">01 / STAFFING</div><h3>Wykwalifikowane ekipy</h3><p>Dostarczamy sprawdzonych pracowników budowlanych przygotowanych do pracy na Twojej inwestycji.</p></div>
-<div class="service"><div class="service-number">02 / GENERAL CONTRACTOR</div><h3>Generalny wykonawca</h3><p>Kompleksowo realizujemy prace budowlane — od przygotowania terenu po finalne wykończenie.</p></div>
-<div class="service"><div class="service-number">03 / INDUSTRIAL</div><h3>Obiekty przemysłowe</h3><p>Hale, magazyny, konstrukcje stalowe oraz specjalistyczne obiekty przemysłowe.</p></div>
-<div class="service"><div class="service-number">04 / INFRASTRUCTURE</div><h3>Drogi i infrastruktura</h3><p>Budowa dróg, infrastruktury oraz zagospodarowanie terenów zewnętrznych.</p></div>
-</div></div>
-</section>
+<section id="location"><div class="container">
+<div class="section-title"><small>Obszar działania</small><h2>Gdzie <span>pracujemy?</span></h2></div>
+<div class="location-box"><h3>Obsługujemy</h3><div class="location-list"><span>Warszawa</span><span>Łódź</span><span>Okolice Warszawy</span><span>Okolice Łodzi</span></div></div>
+</div></section>
 
-<section id="about">
-<div class="container about-grid">
-<div class="about-image"></div>
-<div class="about-text">
-<div class="eyebrow">UKR-BUD</div>
-<h2>Ludzie.<br>Doświadczenie.<br><span>Rezultat.</span></h2>
-<p>Od lat wspieramy firmy budowlane i generalnych wykonawców w realizacji wymagających inwestycji na terenie Polski.</p>
-<p>Łączymy sprawdzone ekipy, doświadczenie techniczne i odpowiedzialność za terminowe wykonanie prac.</p>
-<div class="stats">
-<div class="stat"><strong>5+</strong><span>lat doświadczenia</span></div>
-<div class="stat"><strong>10+</strong><span>placów budowy</span></div>
-<div class="stat"><strong>100%</strong><span>zaangażowania</span></div>
-</div>
-</div></div>
-</section>
+<section class="cta"><div class="container cta-inner"><div><h2>Potrzebujesz rusztowań?</h2><p>Skontaktuj się z nami i zapytaj o wycenę.</p></div><a href="tel:+48538434728" class="btn">+48 538 434 728</a></div></section>
 
-<section class="projects" id="projects">
-<div class="container">
-<div class="section-head"><div>
-<div class="eyebrow">Nasze realizacje</div>
-<h2>Realne projekty.<br>Realne doświadczenie.</h2>
-</div><p>Projekty przemysłowe, logistyczne, infrastrukturalne i budowlane realizowane przez nasze zespoły.</p></div>
-<div class="project-grid">
-<div class="project"><div class="project-info"><small>01 / LOGISTYKA</small><h3>Park logistyczny</h3></div></div>
-<div class="project"><div class="project-info"><small>02 / INDUSTRIAL</small><h3>Zakład przemysłowy</h3></div></div>
-<div class="project"><div class="project-info"><small>03 / RENOVATION</small><h3>Modernizacja obiektu</h3></div></div>
-<div class="project"><div class="project-info"><small>04 / STEEL</small><h3>Konstrukcje stalowe</h3></div></div>
-<div class="project"><div class="project-info"><small>05 / INDUSTRIAL</small><h3>Zakład produkcyjny</h3></div></div>
-<div class="project"><div class="project-info"><small>06 / CONSTRUCTION</small><h3>Budowa obiektu</h3></div></div>
-</div></div>
-</section>
-
-<section id="process">
-<div class="container">
-<div class="section-head"><div>
-<div class="eyebrow">Jak działamy</div>
-<h2>Od zapytania<br>do realizacji.</h2>
-</div><p>Prosty i przejrzysty proces współpracy. Ty określasz potrzeby — my zajmujemy się resztą.</p></div>
-<div class="process-grid">
-<div class="step"><div class="step-number">01</div><h3>Zapytanie</h3><p>Przesyłasz nam zakres prac, liczbę pracowników i termin.</p></div>
-<div class="step"><div class="step-number">02</div><h3>Analiza</h3><p>Poznajemy projekt i dobieramy odpowiedni zespół.</p></div>
-<div class="step"><div class="step-number">03</div><h3>Przygotowanie</h3><p>Organizujemy pracowników, dokumentację i wyposażenie.</p></div>
-<div class="step"><div class="step-number">04</div><h3>Start prac</h3><p>Ekipa pojawia się na budowie i rozpoczyna realizację.</p></div>
-</div></div>
-</section>
-
-<section class="contact" id="contact">
-<div class="container contact-grid">
-<div><h2>Masz projekt?<br>Zróbmy go.</h2><p>Potrzebujesz ekipy lub generalnego wykonawcy? Skontaktuj się z nami.</p></div>
-<div class="contact-info">
-<div class="contact-item"><small>Telefon</small><a href="tel:+48534847151">+48 534 847 151</a></div>
-<div class="contact-item"><small>Email</small><a href="mailto:Biuroukrbud@gmail.com">Biuroukrbud@gmail.com</a></div>
-<div class="contact-item"><small>Biuro</small><strong>Plac Wolności 6/1<br>45-018 Opole, Poland</strong></div>
-<div class="contact-item"><small>NIP</small><strong>9910504015</strong></div>
-</div></div>
-</section>
+<section id="contact"><div class="container">
+<div class="section-title"><small>Kontakt</small><h2>Skontaktuj się <span>z nami</span></h2></div>
+<div class="contact-grid">
+<div class="contact-card"><h3>Telefon</h3><a href="tel:+48538434728">+48 538 434 728</a></div>
+<div class="contact-card"><h3>E-mail</h3><a href="mailto:ukrbuddmytrobobyr13@gmail.com">ukrbuddmytrobobyr13@gmail.com</a></div>
+<div class="contact-card"><h3>Biuro</h3><p class="address">Ul. Starowiejska<br>05-090 Stary Sękocin<br>Polska</p></div>
+<div class="contact-card"><h3>NIP</h3><p>5223252882</p></div>
+</div></div></section>
 </main>
 
-<footer>
-<div class="container footer-content">
-<div>© 2026 UKR-BUD</div>
-<div>Niezawodne ekipy. Tam, gdzie trzeba. Wtedy, kiedy trzeba.</div>
+<footer><div class="container"><div class="footer-top">
+<div class="footer-column">
+<div class="footer-logo">UKR<span>-</span>BUD</div>
+<p style="margin-top:12px;">Montaż • Demontaż • Wynajem rusztowań</p>
+<div class="social-links">
+<a class="social-link" href="https://www.instagram.com/montaz_demontaz.rusztowan?igsi=MTdzMTBvb3dmdmZtdA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+</a>
+<a class="social-link" href="https://www.facebook.com/share/1PLYn9QfF7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"></path></svg>
+</a>
+<a class="social-link" href="https://www.tiktok.com/@dmytro_bobyr?_r=1&_t=ZN-99N4msybJrS" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a3.3 3.3 0 1 1-2.8-3.3v3.1a1.1 1.1 0 1 0 1 1.1V4h3.1c.4 1.9 1.6 3.1 3.5 3.5v3c-1.3-.1-2.5-.5-3.5-1.2v4.9a6.1 6.1 0 1 1-5.2-6V4H14z"></path></svg>
+</a>
 </div>
-</footer>
+</div>
+<div class="footer-column"><h4>Kontakt</h4><p><a href="tel:+48538434728">+48 538 434 728</a></p><p><a href="mailto:ukrbuddmytrobobyr13@gmail.com">ukrbuddmytrobobyr13@gmail.com</a></p></div>
+<div class="footer-column"><h4>Biuro</h4><p>Ul. Starowiejska<br>05-090 Stary Sękocin<br>Polska</p></div>
+</div><div class="footer-bottom">© 2026 UKR-BUD. Wszystkie prawa zastrzeżone.</div></div></footer>
 </body>
 </html>
